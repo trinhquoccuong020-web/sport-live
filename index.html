@@ -75,6 +75,6 @@ async function logout(){await supabaseClient.auth.signOut();userMenu.classList.r
 
 const searchInput=document.getElementById('searchInput');searchInput.oninput=()=>{const q=searchInput.value.toLowerCase().trim();document.querySelectorAll('[data-search]').forEach(x=>x.style.display=!q||x.dataset.search.toLowerCase().includes(q)?'':'none')};
 supabaseClient.auth.onAuthStateChange(()=>updateAccountUI());updateAccountUI();renderPage('home');
-</script>
+<script src="sports-api.js"></script>
 </body>
 </html>
